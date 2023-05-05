@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<style>
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    width: 900px;
+    margin-left: 18%;
+  }
+  form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #2e71d6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #0d2b58;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.psw a:hover {
+  font-size: 18px;
+}
+</style>
+<body>
+  <form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="img/login.png" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Nome do Usuário</b></label>
+      <input type="text" placeholder="Insira Nome de Usuário" name="uname" required>
+  
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite a Senha" name="psw" required>
+  
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Lembre de mim
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancelar</button>
+      <span class="psw"><a href="#" style="text-decoration: none; color: #2e71d6;">Esqueceu a senha?</a></span>
+    </div>
+  </form>
+</body>
+</html>

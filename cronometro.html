@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="147186.png" type="image/x-icon">
+    <title>Cronômetro</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CRONÔMETRO</h1>
+        <div class="principal">
+            <p class="tempo">
+                <span class="minutos">00</span>:<span class="segundos">00</span>:<span class="milissegundos">00</span>
+            </p>
+            <div>
+                <button onclick="iniciar()" class="iniciar">INICIAR</button>
+                <button onclick="parar()" class="parar">PARAR</button>
+                <button onclick="resetar()" class="resetar">RESETAR</button>
+            </div>
+        </div>
+    </div>
+    <script src="cronometro.js">
+        const miliseg = document.querySelector('.milisegundos')
+        const seg = document.querySelector('.segundos')
+        const min = document.querySelector('.minutos')
+
+        let miliNum = 0
+        let segNum = 0
+        let minNum = 0
+        let INTERVALO
+
+        
+        function milissegundos() {
+            miliNum++
+            milissegundos.innerHTML = miliNum
+        }
+
+        function segundos() {
+            segNum++
+            segundos.innerHTML = segNum
+        }
+
+        function minutos() {
+            minNum++
+            minutos.innerHTML = minNum
+        }
+
+        function iniciar() {
+            clearInterval(INTERVALO)
+            INTERVALO = setInterval(() => {
+                milissegundos()
+
+            }, 10)
+        }
+
+        function milissegundos() {
+            miliNum++
+            if (miliNum < 10) {
+                miliseg.innerHTML = '0' + miliNum
+            } else {
+                miliseg.innerHTML = miliNum
+            }
+            if (miliNum == 99) {
+                miliNum = 0
+                segundos()
+            }
+        }
+
+        function segundos() {
+            segNum++
+            if (segNum < 10) {
+                
+            }
+        }
+    </script>
+</body>
+</html>
